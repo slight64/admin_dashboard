@@ -1,5 +1,6 @@
 client/node_modules 
-
+client/.env.local
+client/compare.jsx
 
 server/node_modules 
 server/.env
