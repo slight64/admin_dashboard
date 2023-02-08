@@ -23,7 +23,7 @@ const DataGridCustomToolbar = ({ searchInput, setSearchInput, setSearch }) => {
           sx={{ mb: '0.5rem', width: '15rem' }}
           onChange={(e) => setSearchInput(e.target.value)}
           value={searchInput}
-          variant="standart"
+          // variant="standart"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
