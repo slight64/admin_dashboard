@@ -35,7 +35,7 @@ export const getCustomers = async (req, res) => {
 
 export const getTransactions = async (req, res) => {
   try {
-    const { page = 1, pageSize = 20, sort = null, search = '' } = req.quert;
+    const { page = 1, pageSize = 20, sort = null, search = '' } = req.query;
     const generateSort = () => {
       const sortParsed = JSON.parse(sort);
       const sortFormatted = {
@@ -60,7 +60,7 @@ export const getTransactions = async (req, res) => {
       name: { $regex: search, $options: 'i' },
     });
 
-    res.status(200).json(transactions, total);
+    res.status(200).json({ transactions, total });
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
